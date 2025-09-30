@@ -20,8 +20,7 @@ done
 
 # Define base URLs
 BASE_URLS=(
-    "https://raw.githubusercontent.com/KroMiose/nekro-agent/main/docker"
-    "https://raw.gitcode.com/gh_mirrors/ne/nekro-agent/raw/main/docker"
+    "https://raw.githubusercontent.com/ThanatosIng/nekro-agent/main/docker"
 )
 
 # Docker 镜像
@@ -384,7 +383,7 @@ fi
 
 # 拉取沙盒镜像
 echo "拉取沙盒镜像..."
-if ! sudo docker pull kromiose/nekro-agent-sandbox; then
+if ! sudo docker pull thanatos79/nekro-agent-sandbox; then
     echo "Error: 无法拉取沙盒镜像，请检查您的网络连接。"
     exit 1
 fi
