@@ -32,7 +32,7 @@ services:
 
   # 主服务
   nekro_agent:
-    image: kromiose/nekro-agent:latest
+    image: thanatos79/nekro-agent:latest
     container_name: ${INSTANCE_NAME}nekro_agent
     environment:
       - NEKRO_DATA_DIR=${NEKRO_DATA_DIR}
