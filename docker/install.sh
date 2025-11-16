@@ -19,10 +19,7 @@ while [[ "$#" -gt 0 ]]; do
 done
 
 # Define base URLs
-BASE_URLS=(
-    "https://raw.githubusercontent.com/KroMiose/nekro-agent/main/docker"
-    "https://ep.nekro.ai/e/KroMiose/nekro-agent/main/docker"
-)
+BASE_URLS="https://raw.githubusercontent.com/ThanatosIng/nekro-agent/main/docker"
 
 # Docker 镜像
 DOCKER_IMAGE_MIRRORS=(
@@ -384,7 +381,7 @@ fi
 
 # 拉取沙盒镜像
 echo "拉取沙盒镜像..."
-if ! sudo docker pull kromiose/nekro-agent-sandbox; then
+if ! sudo docker pull ThanatosIng/nekro-agent-sandbox; then
     echo "Error: 无法拉取沙盒镜像，请检查您的网络连接。"
     exit 1
 fi
