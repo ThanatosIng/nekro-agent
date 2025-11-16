@@ -50,8 +50,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            kromiose/nekro-agent:${{ needs.setup-version.outputs.version }}
-            kromiose/nekro-agent:latest
+            thanatos79/nekro-agent:${{ needs.setup-version.outputs.version }}
+            thanatos79/nekro-agent:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
       - name: Docker Logout
@@ -82,8 +82,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            kromiose/nekro-agent-sandbox:${{ needs.setup-version.outputs.version }}
-            kromiose/nekro-agent-sandbox:latest
+            thanatos79/nekro-agent-sandbox:${{ needs.setup-version.outputs.version }}
+            thanatos79/nekro-agent-sandbox:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
       - name: Docker Logout
