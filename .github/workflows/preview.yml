@@ -83,8 +83,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            thanatos79/nekro-agent:preview
-            thanatos79/nekro-agent:preview-${{ steps.sha.outputs.short_sha }}
+            sevennine233/nekro-agent:preview
+            sevennine233/nekro-agent:preview-${{ steps.sha.outputs.short_sha }}
             ghcr.io/${{ steps.repo.outputs.owner }}/nekro-agent:preview
             ghcr.io/${{ steps.repo.outputs.owner }}/nekro-agent:preview-${{ steps.sha.outputs.short_sha }}
           cache-from: type=gha
@@ -139,8 +139,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            thanatos79/nekro-agent-sandbox:preview
-            thanatos79/nekro-agent-sandbox:preview-${{ steps.sha.outputs.short_sha }}
+            sevennine233/nekro-agent-sandbox:preview
+            sevennine233/nekro-agent-sandbox:preview-${{ steps.sha.outputs.short_sha }}
             ghcr.io/${{ steps.repo.outputs.owner }}/nekro-agent-sandbox:preview
             ghcr.io/${{ steps.repo.outputs.owner }}/nekro-agent-sandbox:preview-${{ steps.sha.outputs.short_sha }}
           cache-from: type=gha
