@@ -14,25 +14,29 @@ services:
       POSTGRES_DB: ${POSTGRES_DATABASE}
     volumes:
       - nekro_postgres_data:/var/lib/postgresql/data
+    ports:
+      - "${POSTGRES_EXPOSE_PORT:-5432}:5432"
     networks:
       - nekro_network
     restart: unless-stopped
 
   # Qdrant 服务
   nekro_qdrant:
-    image: qdrant/qdrant
+    image: qdrant/qdrant:latest
     container_name: ${INSTANCE_NAME:-}nekro_qdrant
     environment:
       - QDRANT__SERVICE__API_KEY=${QDRANT_API_KEY:-}
     volumes:
       - nekro_qdrant_data:/qdrant/storage:z
+    ports:
+      - "${QDRANT_EXPOSE_PORT:-6333}:6333"
     networks:
       - nekro_network
     restart: unless-stopped
 
   # 主服务
   nekro_agent:
-    image: kromiose/nekro-agent:latest
+    image: kromiose/nekro-agent:preview
     container_name: ${INSTANCE_NAME:-}nekro_agent
     environment:
       - NEKRO_INSTANCE_NAME=${INSTANCE_NAME:-}nekro_agent
@@ -62,7 +66,7 @@ services:
 
   # Napcat 服务
   nekro_napcat:
-    image: mlikiowa/napcat-docker
+    image: mlikiowa/napcat-docker:latest
     container_name: ${INSTANCE_NAME:-}nekro_napcat
     ports:
       - "${NAPCAT_EXPOSE_PORT:-6099}:6099"
