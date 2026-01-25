@@ -383,7 +383,7 @@ fi
 
 # 拉取沙盒镜像
 echo "拉取沙盒镜像..."
-if ! sudo docker pull kromiose/nekro-agent-sandbox; then
+if ! sudo docker pull kromiose/nekro-agent-sandbox:preview; then
     echo "Error: 无法拉取沙盒镜像，请检查您的网络连接。"
     exit 1
 fi
