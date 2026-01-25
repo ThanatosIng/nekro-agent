@@ -20,8 +20,7 @@ done
 
 # Define base URLs
 BASE_URLS=(
-    "https://raw.githubusercontent.com/KroMiose/nekro-agent/main/docker"
-    "https://ep.nekro.ai/e/KroMiose/nekro-agent/main/docker"
+    "https://raw.githubusercontent.com/SevenNine233/nekro-agent/main/docker"
 )
 
 # Docker 镜像
